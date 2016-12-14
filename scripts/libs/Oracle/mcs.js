@@ -220,8 +220,8 @@ var Platform = function() {
    */
   this.getGPSLocation = function() {
     return {
-      "latitude": null,
-      "longitude": null
+      "latitude": mcs.MobileBackendManager.platform.latitude,
+      "longitude": mcs.MobileBackendManager.platform.longitude
     };
   };
 
@@ -2327,7 +2327,6 @@ mcs.MobileBackendManager.returnMobileBackend = function(name, config) {
     "rest of the functions you need to call.");
 
   return mcs.MobileBackendManager.getMobileBackend(name);
-
 };
 
 
@@ -2350,7 +2349,6 @@ mcs.MobileBackendManager.getMobileBackend = function(name) {
 };
 
 //"use strict";
-
 /**
  * Class that represents a storage object resource that can be used to store data.
  * @constructor
